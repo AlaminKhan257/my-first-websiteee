@@ -1,0 +1,618 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* This Is Header Section */
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(./image/blur.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    padding: 3% 5%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h3{
+    font-size: 18px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.nav-menu{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-menu ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 10px;
+    position: relative;
+}
+
+.nav-menu ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.nav-menu ul li::after{
+    content: '';
+    width: 0px;
+    height: 5px;
+    background-color: black;
+    display: block;
+    margin: auto;
+    position: absolute;
+    bottom: -5px;
+}
+
+.nav-menu ul li:hover::after{
+    width: 100%;
+}
+
+.title-description{
+    width: 450px;
+    position: absolute;
+    top: 230px;
+    left: 30px;
+    color: white;
+}
+
+.title-description h1{
+    font-size: 60px;
+}
+
+.title-description p{
+    margin: 10px 0;
+    font-size: 15px;
+}
+
+.profile-image{
+    width: 40%;
+    position: absolute;
+    top: 36%;
+    left: 58%;
+
+}
+
+.title-description a{
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid white;
+    background: transparent;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 14px;
+    position: relative;
+    top: 13px;
+}
+
+.title-description a:hover{
+    background-color: gray;
+    border: 2px solid black;
+    transition: 1s;
+}
+
+nav span{
+    display: none;
+}
+
+/* Header Section For Responsive */
+
+@media only screen and (max-width: 700px){
+    .title-description{
+        text-align: center;
+    }
+
+    .title-description h1{
+        font-size: 30px;
+    }
+
+    nav span{
+        display: block;
+        color: white;
+        margin: 10px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .nav-menu{
+        position: absolute;
+        background: rgba(0,0,0,0.2);
+        height: 100vh;
+        width: 300px;
+        top: 0;
+        right: -300px;
+        text-align: left;
+        z-index: 1;
+        transition: 1s;
+    }
+
+    .nav-menu ul li{
+        display: block;
+        margin: 10px 0;
+    }
+
+    .nav-menu ul{
+        padding: 20px;
+    }
+
+    .profile-image{
+        width: 42%;
+        position: absolute;
+        top: 65%;
+        left: 29%;
+    
+    }
+}
+
+/* This Is About Section */
+
+.row{
+    display: flex;
+    margin-top: 5%;
+    justify-content: space-between;
+}
+
+.about-me{
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+}
+
+.about-me h1{
+    text-align: center;
+    text-decoration: underline;
+}
+
+.about-me-col{
+    flex-basis: 45%;
+    border-radius: 10px;
+    margin-bottom: 4%;
+}
+
+.about-me-col img{
+    width: 200px;
+    height: 240px;
+    border-radius: 50%;
+}
+
+.about-me-col h2{
+    margin-top: 14px;
+    margin-bottom: 14px;
+    text-align: left;
+}
+
+.about-me-col p{
+    color: #777;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 20px;
+    padding: 12px;
+}
+
+/* About Section For Responsive */
+
+@media only screen and (max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+
+    .about-me-col h2{
+        text-align: center;
+    }
+
+    .about-me-col img{
+        margin-left: 98px;
+    }
+}
+
+/* This Is Skills Section */
+
+.skills{
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    background-color: #fff3f4;
+}
+
+.skills h1{
+    text-align: center;
+    text-decoration: underline;
+    position: relative;
+    bottom: 30px;
+}
+
+.skill-col{
+    flex-basis: 45%;
+    border-radius: 10px;
+    margin-bottom: 4%;
+    padding: 12px;
+}
+
+.skill-col h2{
+    margin-bottom: 15px;
+}
+
+.skill-col p{
+    color: #777;
+}
+
+.skill-col ul li{
+    list-style: none;
+    margin: 20px 0;
+}
+
+.skill-col .bar{
+    display: block;
+    height: 8px;
+    border: 1px solid black;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.skill-col .bar span{
+    height: 20px;
+    float: left;
+    background-color: gray;
+}
+
+.html{
+    width: 90%;
+    animation: html 2s;
+}
+
+.css{
+    width: 70%;
+    animation: css 2s;
+}
+
+.javacript{
+    width: 60%;
+    animation: javacript 2s;
+}
+
+.jquery{
+    width: 50%;
+    animation: jquery 2s;
+}
+
+@keyframes html{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 90%;
+    }
+}
+
+@keyframes css{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 70%;
+    }
+}
+
+@keyframes javacript{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 60%;
+    }
+}
+
+@keyframes jquery{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 50%;
+    }
+}
+
+/* This Is Service Section */
+
+.service{
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+}
+
+.service h1{
+    text-align: center;
+    text-decoration: underline;
+}
+
+.service p{
+    font-size: 15px;
+    text-align: center;
+    color: #777;
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+.service-column{
+    flex-basis: 30%;
+    background-color: #fff3f4;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+}
+
+.service-column h2{
+    text-align: center;
+}
+
+.service-column p{
+    text-align: left;
+}
+
+.service-column:hover{
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
+}
+
+/* This Is Portfolio Section */
+
+.portfolio{
+    background-color: #fff3f4;
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+}
+
+.portfolio h1{
+    text-align: center;
+    text-decoration: underline;
+}
+
+.portfolio p{
+    text-align: center;
+    color: #777;
+    margin-top: 10px;
+    padding-bottom: 20px;
+}
+
+.portfolio-column{
+    flex-basis: 30%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-column img{
+    width: 100%;
+    display: block;
+}
+
+.overlay{
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 1s;
+}
+
+.overlay:hover{
+    background-color: rgba(225,0,0,0.5);
+}
+
+.overlay h3{
+    width: 100%;
+    color: #fff;
+    font-weight: 500;
+    font-size: 25px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+}
+
+.overlay:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+
+/* This Is Testimonial Section */
+
+/* .testimonial{
+    background-color: #fff3f4;
+    width: 80%;
+    margin-top: 40px;
+    margin-left: 100px;
+} */
+
+.testimonial{
+    width: 80%;
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+.testimonial h1{
+    text-align: center;
+    text-decoration: underline;
+}
+
+.testimonial p{
+    text-align: center;
+    color: #777;
+    margin-top: 10px;
+}
+
+.testimonial-col{
+    flex-basis: 40%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background-color: #fff3f4;
+    padding: 25px;
+    display: flex;
+    cursor: pointer;
+}
+
+.testimonial-col:hover{
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
+}
+
+.testimonial-col img{
+    width: 58px;
+    height: 70px;
+    border-radius: 50%;
+    margin-left: 5px;
+}
+
+.testimonial-col p{
+    padding: 0;
+    margin-left: 5px;
+    text-align: left;
+}
+
+/* .testimonial-col h3{
+    margin-top: 15px;
+    text-align: left;
+} */
+
+/* Testimonial Resposive */
+
+@media only screen and (max-width:700px){
+    .testimonial{
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+}
+
+/* This Is Follow Section */
+
+.call-to-action{
+    width: 80%;
+    margin: 100px auto;
+    background-image: url(./image/blur.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.call-to-action h2{
+    color: #fff;
+    margin-bottom: 30px;
+    padding: 0;
+}
+
+.call-to-action a{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid white;
+    padding: 13px 30px;
+    background: transparent;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.call-to-action a:hover{
+    background-color: grey;
+    border: 2px solid black;
+    transition: .5s;
+}
+
+/* This Is Footer Section */
+
+.footer{
+    width: 80%;
+    background-color: #24262b;
+    margin-left: 100px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+.footer-col{
+    width: 30%;
+    padding: 0 15px;
+}
+
+.footer h1{
+    font-size: 17px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.footer h1::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 3px;
+    width: 100px;
+    box-sizing: border-box;
+}
+
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.footer ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    display: block;
+    transition: all .5s ease;
+}
+
+.footer ul li a:hover{
+    padding-left: 8px;
+    color: #ffe;
+}
+
+.footer-col-icon a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(225, 225, 225, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 40px;
+    color: #fff;
+}
+
+.footer-col-icon a:hover{
+    background-color: #fff;
+    color: #1f333e;
+}
+
+/* Footer Section Responsive */
+
+@media only screen and (max-width:700px){
+    .footer-col{
+        margin-top: 30px;
+    }
+
+    .footer-col-icon{
+        margin-top: 30px;
+    }
+}
